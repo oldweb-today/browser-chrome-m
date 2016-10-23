@@ -1,6 +1,6 @@
 FROM webrecorder/browser-chrome
 
-COPY Preferences /home/browser/Preferences
+ADD Preferences.tar.gz /home/browser/
 
 COPY jwmrc /home/browser/.jwmrc
 
