@@ -4,7 +4,11 @@ ADD Preferences.tar.gz /home/browser/
 
 COPY jwmrc /home/browser/.jwmrc
 
+COPY resources.pak /opt/google/chrome/resources.pak
+
 COPY run.sh /app/run.sh
+
+ADD hidedt.py /app/hidedt.py
 
 RUN sudo chmod a+x /app/run.sh
 

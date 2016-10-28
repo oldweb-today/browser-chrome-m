@@ -27,7 +27,7 @@ cp ~/Preferences ~/.config/google-chrome/Default/
 
 URL="http://webrecorder.io/_homepage"
 
-run_browser google-chrome --disable-gpu --no-default-browser-check --disable-background-networking --disable-client-side-phishing-detection --disable-component-update --safebrowsing-disable-auto-update --auto-open-devtools-for-tabs --disable-session-crashed-bubble --disable-infobars "$URL" &
+run_browser google-chrome --disable-gpu --no-default-browser-check --disable-background-networking --disable-client-side-phishing-detection --disable-component-update --safebrowsing-disable-auto-update --auto-open-devtools-for-tabs --disable-session-crashed-bubble --disable-infobars --new-window "$URL" &
 
 pid=$!
 
@@ -50,6 +50,8 @@ while [ -z "$wid" ]; do
         count=0
     fi
 done
+
+python /app/hidedt.py &
 
 
 wait $pid
