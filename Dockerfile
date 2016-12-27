@@ -1,4 +1,4 @@
-FROM webrecorder/browser-chrome
+FROM oldwebtoday/browser-chrome
 
 ADD Preferences.tar.gz /home/browser/
 
